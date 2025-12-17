@@ -464,7 +464,7 @@ ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
         te = -1
 
        
- 10     do i = 1, n
+        do i = 1, n
 
            call between(px(i), px(i+1), x, is, iecode)
 
@@ -516,13 +516,13 @@ ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
               endif
            endif
             
- 19     enddo
+        enddo
 
- 60     if( ip - ip /2 * 2.eq.1) then
+        if( ip - ip /2 * 2.eq.1) then
            te=1
           else
            te = -1
- 69     endif
+        endif
 
  910    continue
         flag(k)=te

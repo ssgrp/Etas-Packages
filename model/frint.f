@@ -12,7 +12,7 @@ ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
         external func
 
         real*8 para(6)  
-        real*8 xtemp(3),ytemp(3)
+c        real*8 xtemp(3),ytemp(3)
 
         r1=havad(x1,y1,xc,yc)
         r2=havad(x2,y2,xc,yc)
@@ -74,7 +74,7 @@ ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
            stemp(j)=0d0
            diflon = dirdif(ttx(j),ttx(j+1), 0)
            diflen = diflon*cos(tty(j))
-           ndiv = abs(diflen)/(0.05d0/180d0*pi)+2
+           ndiv = int(abs(diflen)/(0.05d0/180d0*pi))+2
            dlon = diflon /(dble(ndiv)-1d0)
 
            do i=1, ndiv-1
@@ -92,7 +92,7 @@ ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
         do j=2,4,2
            stemp(j)=0d0
            diflat = (tty(j+1)-tty(j))
-           ndiv = abs(diflat)/(0.05d0/180d0*pi)+2
+           ndiv = int(abs(diflat)/(0.05d0/180d0*pi)+2)
            dlat = diflat/(dble(ndiv)-1d0)
             
           do i=1, ndiv-1
@@ -137,7 +137,7 @@ ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
          call beardirt(xc, yc, xp(j+1), yp(j+1), bx, by, da2)
          bd = dirdif(da1,da2,1)      
          if(abs(bd).gt.0d0.and.abs(bd).lt.pi) then   
-           ndiv= abs(bd)/(0.005d0/180d0*pi) + 2
+           ndiv= int(abs(bd)/(0.005d0/180d0*pi)) + 2
            if(ndiv.lt.7)ndiv=7
            if(ndiv/2*2.eq. ndiv) ndiv = ndiv +1
            delta = bd/dble(ndiv-1)

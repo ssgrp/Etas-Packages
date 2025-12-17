@@ -6,4 +6,4 @@
       common/antip/xa(NND), ya(NND),indat(NND)
       common/data2/ibndtyp,npoly,nn,ind(NND),nnc,mx,my,mz
       common/back/zprob(NND),zbandw(NND),zbkgd(NND),xint0
-      common/smoothing/npp,bwm,bwh
+      common/smoothing/bwm,bwh,npp

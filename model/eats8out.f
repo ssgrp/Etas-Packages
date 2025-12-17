@@ -105,6 +105,6 @@ c        include 'mpif.h'
         endif
        return 
 
- 990  format(6(1x,i5,f7.4))
+c 990  format(6(1x,i5,f7.4))
  992  format(1x,i8,3f20.10)
       end
