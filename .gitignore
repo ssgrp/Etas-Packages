@@ -1,0 +1,31 @@
+# build artifacts
+*.mod
+*.o
+obj/
+mod/
+
+# runtime outputs
+Results/
+fort.*
+*.out
+
+# R
+.RData
+.Rhistory
+
+# backups / experiments
+model.backup/
+model.implicit-none/
+model.mod_ready/
+model.use-mpi/
+model.v1.0/
+example.mod/
+example2/
+
+
+# misc
+example/alaska.out
+example/bandwidth.dat
+example/fort.*
+example/pmatr.dat
+
